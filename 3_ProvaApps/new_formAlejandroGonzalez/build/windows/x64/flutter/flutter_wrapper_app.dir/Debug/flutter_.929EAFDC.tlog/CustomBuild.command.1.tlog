@@ -1,0 +1,10 @@
+^C:\USERS\USUARIO\S2AM\MOVILS\3_PROVAAPPS\NEW_FORM\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Usuario/S2AM/Movils/3_ProvaApps/new_form/windows -BC:/Users/Usuario/S2AM/Movils/3_ProvaApps/new_form/build/windows/x64 --check-stamp-file C:/Users/Usuario/S2AM/Movils/3_ProvaApps/new_form/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
