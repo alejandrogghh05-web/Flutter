@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "Fénix",
+    "mythology": "Griega / Egipcia",
+    "description": "Ave sagrada que renace de sus cenizas, símbolo de inmortalidad y renovación.",
+    "short_description": "Ave que renace de sus cenizas, símbolo de inmortalidad.",
+    "image": "assets/img/phoenix.jpg",
+    "imageLogo": "assets/logos/logoPhoenix.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Dragón",
+    "mythology": "China",
+    "description": "Ser serpentino de gran poder, asociado con la fortuna, la sabiduría y el control de los elementos.",
+    "short_description": "Serpentino de gran poder, asociado a fortuna y sabiduría.",
+    "image": "assets/img/dragonChino.jpg",
+    "imageLogo": "assets/logos/logoDragon.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Dragón Occidental",
+    "mythology": "Europea",
+    "description": "Reptil alado gigantesco capaz de escupir fuego. En la fantasía moderna, como en la obra de Tolkien, se lo representa como un ser antiguo, inteligente y codicioso, guardián de montañas y cavernas repletas de tesoros.",
+    "short_description": "Reptil alado que escupe fuego, guardián de tesoros.",
+    "image": "assets/img/dragonOCC.jpg",
+    "imageLogo": "assets/logos/logoDragonOCC.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Griffin",
+    "mythology": "Europea / Cercano Oriente",
+    "description": "Criatura híbrida con cabeza y alas de águila y cuerpo de león. Símbolo de fuerza y nobleza, comúnmente representado como guardián de tesoros y reliquias sagradas.",
+    "short_description": "Híbrido de águila y león, símbolo de fuerza y nobleza.",
+    "image": "assets/img/griffin.jpg",
+    "imageLogo": "assets/logos/Logogriffin.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Unicornio",
+    "mythology": "Europea",
+    "description": "Caballo blanco con un cuerno mágico, símbolo de pureza y sanación.",
+    "short_description": "Caballo blanco con cuerno, símbolo de pureza y sanación.",
+    "image": "assets/img/unicorn.jpg",
+    "imageLogo": "assets/logos/unicornLogo.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Kraken",
+    "mythology": "Nórdica",
+    "description": "Monstruo marino gigantesco capaz de hundir barcos enteros.",
+    "short_description": "Monstruo marino gigantesco que hunde barcos.",
+    "image": "assets/img/kraken.jpg",
+    "imageLogo": "assets/logos/krakenLogo.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Pegasus",
+    "mythology": "Griega",
+    "description": "Caballo alado nacido de la sangre de Medusa, símbolo de libertad e inspiración.",
+    "short_description": "Caballo alado, símbolo de libertad e inspiración.",
+    "image": "assets/img/pegasus.jpg",
+    "imageLogo": "assets/logos/pegasusLogo.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Kitsune",
+    "mythology": "Japonesa",
+    "description": "Zorro místico con varias colas, famoso por su inteligencia y habilidades mágicas. Maestro de las ilusiones el cual se dice que són capaces ",
+    "short_description": "Zorro místico con varias colas, inteligente y mágico.",
+    "image": "assets/img/kitsune.jpg",
+    "imageLogo": "assets/logos/kitsuneLogo.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Minotauro",
+    "mythology": "Griega",
+    "description": "Criatura con cuerpo humano y cabeza de toro, habitante del Laberinto de Creta.",
+    "short_description": "Cuerpo humano y cabeza de toro, habitante del Laberinto.",
+    "image": "assets/img/minotaurus.jpg",
+    "imageLogo": "assets/logos/minotaurLogo.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Kelpie",
+    "mythology": "Escocesa",
+    "description": "Espíritu acuático que habita lagos y ríos. Suele aparecer como un caballo negro mojado, aunque puede transformarse en humano. Atrae a viajeros para llevarlos a las profundidades.",
+    "short_description": "Espíritu acuático con forma de caballo que habita lagos y ríos",
+    "image": "assets/img/kelpie.jpg",
+    "imageLogo": "assets/logos/kelpieLogo.jpg"
+  }
+]
