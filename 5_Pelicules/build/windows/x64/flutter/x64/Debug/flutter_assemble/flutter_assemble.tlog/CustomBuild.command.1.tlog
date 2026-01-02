@@ -1,0 +1,28 @@
+^C:\USERS\USUARIO\DESKTOP\S2AM\MOBILS\PRACTICAS\5_PELICULAS\MOVIES2526\BUILD\WINDOWS\X64\CMAKEFILES\FC8331794604884D0CF218AF6F594F54\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\Usuario\S2AM\flutter PROJECT_DIR=C:\Users\Usuario\Desktop\S2AM\Mobils\Practicas\5_Peliculas\movies2526 FLUTTER_ROOT=C:\Users\Usuario\S2AM\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\Usuario\Desktop\S2AM\Mobils\Practicas\5_Peliculas\movies2526\windows\flutter\ephemeral PROJECT_DIR=C:\Users\Usuario\Desktop\S2AM\Mobils\Practicas\5_Peliculas\movies2526 FLUTTER_TARGET=C:\Users\Usuario\Desktop\S2AM\Mobils\Practicas\5_Peliculas\movies2526\lib\main.dart DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzUuNw==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049YWRjOTAxMDYyNQ==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049MDM1MzE2NTY1YQ==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My45LjI= DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\Usuario\Desktop\S2AM\Mobils\Practicas\5_Peliculas\movies2526\.dart_tool\package_config.json C:/Users/Usuario/S2AM/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\USUARIO\DESKTOP\S2AM\MOBILS\PRACTICAS\5_PELICULAS\MOVIES2526\BUILD\WINDOWS\X64\CMAKEFILES\F78C86B1543FCD74122336452832E387\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\USUARIO\DESKTOP\S2AM\MOBILS\PRACTICAS\5_PELICULAS\MOVIES2526\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Usuario/Desktop/S2AM/Mobils/Practicas/5_Peliculas/movies2526/windows -BC:/Users/Usuario/Desktop/S2AM/Mobils/Practicas/5_Peliculas/movies2526/build/windows/x64 --check-stamp-file C:/Users/Usuario/Desktop/S2AM/Mobils/Practicas/5_Peliculas/movies2526/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

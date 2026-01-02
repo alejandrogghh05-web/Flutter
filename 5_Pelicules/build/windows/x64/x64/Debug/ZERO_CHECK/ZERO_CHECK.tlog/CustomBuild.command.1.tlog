@@ -1,0 +1,10 @@
+^C:\USERS\USUARIO\DESKTOP\S2AM\MOBILS\PRACTICAS\5_PELICULAS\MOVIES2526\BUILD\WINDOWS\X64\CMAKEFILES\1FC639FB6AF111E5AF5D0E0E45BBA644\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Usuario/Desktop/S2AM/Mobils/Practicas/5_Peliculas/movies2526/windows -BC:/Users/Usuario/Desktop/S2AM/Mobils/Practicas/5_Peliculas/movies2526/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Usuario/Desktop/S2AM/Mobils/Practicas/5_Peliculas/movies2526/build/windows/x64/movies.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
