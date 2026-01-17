@@ -9,16 +9,16 @@ class MoviesController extends GetxController {
   @override
   void onInit() async {
     isLoading.value = true;
-    mainTopRatedMovies.value = (await ApiService.getTopRatedMovies())!;
+    mainTopRatedMovies.value = (await ApiService.getTopRatedMovies())!;//rellena la lista con las mejores peliculas
     isLoading.value = false;
     super.onInit();
   }
 
-  bool isInWatchList(Movie movie) {
+  bool isInWatchList(Movie movie) {//metodo que comprara la busqueda con el watchlist
     return watchListMovies.any((m) => m.id == movie.id);
   }
 
-  void addToWatchList(Movie movie) {
+  void addToWatchList(Movie movie) {//agrega o elimina del watchlist
     if (watchListMovies.any((m) => m.id == movie.id)) {
       watchListMovies.remove(movie);
       Get.snackbar('Success', 'removed from watch list',

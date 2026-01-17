@@ -6,7 +6,7 @@ import 'package:movies/screens/details_screen.dart';
 
 class TabBuilder extends StatelessWidget {
   const TabBuilder({
-    required this.future,
+    required this.future,// devuelve la lista de películas
     super.key,
   });
   final Future<List<Movie>?> future;
@@ -18,27 +18,29 @@ class TabBuilder extends StatelessWidget {
         future: future,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
+            // Grid de películas cuando hay datos
             return GridView.builder(
-              physics: const NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),// No  scroll
               // shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 15.0,
-                mainAxisSpacing: 15.0,
-                childAspectRatio: 0.6,
+                crossAxisCount: 3,      // 3 columnas
+                crossAxisSpacing: 15.0,  // Espacio horizontal entre items
+                mainAxisSpacing: 15.0,   // Espacio vertical entre items
+                childAspectRatio: 0.6,   // Relación ancho/alto
               ),
-              itemCount: 6,
+              itemCount: 6,  // Muestra máximo 6 películas
               itemBuilder: (context, index) => GestureDetector(
                 onTap: () {
-                  Get.to(DetailsScreen(movie: snapshot.data![index]));
+                  Get.to(DetailsScreen.movie(movie: snapshot.data![index]));// Navega a pantalla de detalles al tocar
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: Image.network(
-                    'https://image.tmdb.org/t/p/w500/${snapshot.data![index].posterPath}',
+                    'https://image.tmdb.org/t/p/w500/${snapshot.data![index].posterPath}',// URL de la img
                     height: 300,
                     width: 180,
                     fit: BoxFit.cover,
+                    // Icono si hay error
                     errorBuilder: (_, __, ___) => const Icon(
                       Icons.broken_image,
                       size: 180,
@@ -46,7 +48,7 @@ class TabBuilder extends StatelessWidget {
                     loadingBuilder: (_, __, ___) {
                       // ignore: no_wildcard_variable_uses
                       if (___ == null) return __;
-                      return const FadeShimmer(
+                      return const FadeShimmer(// Animación de carga
                         width: 180,
                         height: 250,
                         highlightColor: Color(0xff22272f),
@@ -58,6 +60,7 @@ class TabBuilder extends StatelessWidget {
               ),
             );
           } else {
+            // Spinner mientras carga
             return const Center(
               child: CircularProgressIndicator(),
             );

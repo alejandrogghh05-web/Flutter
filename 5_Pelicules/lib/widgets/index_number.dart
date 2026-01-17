@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class IndexNumber extends StatelessWidget {
   const IndexNumber({
     super.key,
-    required this.number,
+    required this.number,// Número que se mostrará
   });
   final int number;
   @override
@@ -12,7 +12,8 @@ class IndexNumber extends StatelessWidget {
       (number).toString(),
       style: const TextStyle(
         fontSize: 120,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w600,//negrita
+        // Efecto de sombras
         shadows: [
           Shadow(
             offset: Offset(-1.5, -1.5),

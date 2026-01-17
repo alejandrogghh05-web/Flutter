@@ -3,7 +3,7 @@
 import 'package:movies/models/movie.dart';
 
 class Utils{
-  static String getGenres(Movie movie) {
+  static String getGenres(Movie movie) {//pasa de ID a nombres.
     List<String> genres = [];
 
     movie.genreIds.forEach((id) {

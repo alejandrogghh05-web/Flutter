@@ -17,10 +17,12 @@ class WatchList extends StatelessWidget {
             padding: const EdgeInsets.all(34.0),
             child: Column(
               children: [
+                // Barra superior
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    // Botón para volver a Home
                     IconButton(
                       tooltip: 'Back to home',
                       onPressed: () =>
@@ -30,6 +32,7 @@ class WatchList extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
+                    // Título "Watch list"
                     const Text(
                       'Watch list',
                       style: TextStyle(
@@ -37,6 +40,7 @@ class WatchList extends StatelessWidget {
                         fontSize: 24,
                       ),
                     ),
+                    // Espacio vacío para mantener simetría
                     const SizedBox(
                       width: 33,
                       height: 33,
@@ -46,15 +50,18 @@ class WatchList extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
+                // Si hay películas en la watchlist
                 if (Get.find<MoviesController>().watchListMovies.isNotEmpty)
                   ...Get.find<MoviesController>().watchListMovies.map(
                         (movie) => Column(
                           children: [
                             GestureDetector(
-                              onTap: () => Get.to(DetailsScreen(movie: movie)),
+                              // Navega a la pestaña details
+                              onTap: () => Get.to(DetailsScreen.movie(movie: movie)),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
+                                  //imagen de la película
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(16),
                                     child: Image.network(
@@ -67,6 +74,7 @@ class WatchList extends StatelessWidget {
                                         size: 180,
                                       ),
                                       loadingBuilder: (_, __, ___) {
+                                        // Animación de carga
                                         // ignore: no_wildcard_variable_uses
                                         if (___ == null) return __;
                                         return const FadeShimmer(
@@ -81,16 +89,19 @@ class WatchList extends StatelessWidget {
                                   const SizedBox(
                                     width: 5,
                                   ),
+                                  // Información de la película
                                   Infos(movie: movie)
                                 ],
                               ),
                             ),
+                            // Espacio entre películas
                             const SizedBox(
                               height: 20,
                             ),
                           ],
                         ),
                       ),
+                // Si la watchlist está vacía
                 if (Get.find<MoviesController>().watchListMovies.isEmpty)
                   const Column(
                     children: [

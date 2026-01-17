@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-class Movie {
+class Movie {//tipos de datos que contiene la pelicual
   int id;
   String title;
   String posterPath;
@@ -20,7 +20,7 @@ class Movie {
     required this.genreIds,
   });
 
-  factory Movie.fromMap(Map<String, dynamic> map) {
+  factory Movie.fromMap(Map<String, dynamic> map) {//Convierte un Map (JSON) en un objeto Movie
     return Movie(
       id: map['id'] as int,
       title: map['title'] ?? '',
@@ -33,5 +33,5 @@ class Movie {
     );
   }
 
-  factory Movie.fromJson(String source) => Movie.fromMap(json.decode(source));
+  factory Movie.fromJson(String source) => Movie.fromMap(json.decode(source));//convierte JSON string → Map → Movie:
 }

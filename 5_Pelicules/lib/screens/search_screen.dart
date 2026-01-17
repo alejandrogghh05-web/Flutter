@@ -25,10 +25,12 @@ class _SearchScreenState extends State<SearchScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 34),
         child: Column(
           children: [
+            // Barra superior
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                // Botón para volver a Home
                 IconButton(
                   tooltip: 'Back to home',
                   onPressed: () =>
@@ -38,6 +40,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     color: Colors.white,
                   ),
                 ),
+                // Título "Search"
                 const Text(
                   'Search',
                   style: TextStyle(
@@ -45,6 +48,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     fontSize: 24,
                   ),
                 ),
+                // Icono
                 const Tooltip(
                   message: 'Search your wanted movie here !',
                   triggerMode: TooltipTriggerMode.tap,
@@ -58,22 +62,25 @@ class _SearchScreenState extends State<SearchScreen> {
             const SizedBox(
               height: 40,
             ),
+            // Barra de búsqueda
             SearchBox(
               onSumbit: () {
                 String search =
                     Get.find<SearchController1>().searchController.text;
-                Get.find<SearchController1>().searchController.text = '';
-                Get.find<SearchController1>().search(search);
-                FocusManager.instance.primaryFocus?.unfocus();
+                Get.find<SearchController1>().searchController.text = '';  // Limpia el campo
+                Get.find<SearchController1>().search(search);  // Ejecuta búsqueda
+                FocusManager.instance.primaryFocus?.unfocus();  // Oculta teclado
               },
             ),
             const SizedBox(
               height: 34,
             ),
+            // Resultados de búsqueda
             Obx(
-              (() => Get.find<SearchController1>().isLoading.value
+              (() => Get.find<SearchController1>().isLoading.value// animacion carga
                   ? const CircularProgressIndicator()
                   : Get.find<SearchController1>().foundedMovies.isEmpty
+                  // Pantalla cuando no hay resultados
                       ? SizedBox(
                           width: Get.width / 1.5,
                           child: Column(
@@ -115,21 +122,22 @@ class _SearchScreenState extends State<SearchScreen> {
                             ],
                           ),
                         )
-                      : ListView.separated(
+                      : ListView.separated(// Lista de películas encontradas
                           itemCount:
                               Get.find<SearchController1>().foundedMovies.length,
                           shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),// No permite scroll individual
                           separatorBuilder: (_, __) =>
                               const SizedBox(height: 24),
                           itemBuilder: (_, index) {
                             Movie movie = Get.find<SearchController1>()
                                 .foundedMovies[index];
                             return GestureDetector(
-                              onTap: () => Get.to(DetailsScreen(movie: movie)),
+                              onTap: () => Get.to(DetailsScreen.movie(movie: movie)),// Navega a details
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
+                                  // Imagen 
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(16),
                                     child: Image.network(
@@ -156,6 +164,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   const SizedBox(
                                     width: 20,
                                   ),
+                                  // Información de la película
                                   Infos(movie: movie)
                                 ],
                               ),

@@ -9,7 +9,7 @@ class Review {
     required this.rating,
   });
 
-  factory Review.fromJson(Map<String, dynamic> map) {
+  factory Review.fromJson(Map<String, dynamic> map) {//pasa de map a review
     return Review(
       author: map['name'] ?? '',
       comment: map['content'] ?? '',

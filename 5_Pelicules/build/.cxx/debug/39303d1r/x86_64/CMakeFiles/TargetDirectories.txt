@@ -1,0 +1,2 @@
+C:/Users/Usuario/S2AM/Movils/FlutterAlejandro/5_Pelicules/build/.cxx/debug/39303d1r/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Usuario/S2AM/Movils/FlutterAlejandro/5_Pelicules/build/.cxx/debug/39303d1r/x86_64/CMakeFiles/rebuild_cache.dir
