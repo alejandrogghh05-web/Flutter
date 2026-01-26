@@ -105,6 +105,8 @@ class ApiService {
     }
   }
   
+//Codigo Nuevo
+
   static Future<List<Actor>?> getPopularActors() async {
     try {
       final url = '${Api.baseUrl}person/popular?api_key=${Api.apiKey}&language=en-US&page=1';

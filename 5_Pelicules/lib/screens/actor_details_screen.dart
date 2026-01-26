@@ -277,17 +277,6 @@ class ActorDetailsScreen extends StatelessWidget {
                       ),
                       
                       const SizedBox(height: 4), // Espacio entre título y año
-                      
-                      // Año de lanzamiento (si está disponible)
-                      if (movie.releaseDate.isNotEmpty && movie.releaseDate.length >= 4)
-                        Text(
-                          movie.releaseDate.substring(0, 4), // Extrae solo el año
-                          style: const TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300, 
-                            color: Colors.white70, 
-                          ),
-                        ),
                     ],
                   );
                 },
@@ -397,7 +386,7 @@ class ActorDetailsScreen extends StatelessWidget {
     );
   }
   
-  // Método privado que construye una tarjeta de información (etiqueta + valor)
+  // Método privado que construye una tarjeta de información
   Widget _buildInfoCard(String label, String value) {
     return Container(
       width: double.infinity, // Ocupa todo el ancho disponible

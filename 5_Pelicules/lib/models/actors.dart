@@ -30,15 +30,15 @@ class Actor {
   factory Actor.fromMap(Map<String, dynamic> map) {
     return Actor(
       id: map['id'] as int? ?? 0,
-      name: map['name']?.toString() ?? '', // Asegurar string
-      biography: map['biography']?.toString() ?? '', // Asegurar string
-      birthday: map['birthday']?.toString(), // Puede ser null
-      deathday: map['deathday']?.toString(), // Puede ser null
-      placeOfBirth: map['place_of_birth']?.toString(), // Puede ser null
+      name: map['name']?.toString() ?? '', 
+      biography: map['biography']?.toString() ?? '', 
+      birthday: map['birthday']?.toString(), 
+      deathday: map['deathday']?.toString(), 
+      placeOfBirth: map['place_of_birth']?.toString(), 
       popularity: (map['popularity'] as num?)?.toDouble() ?? 0.0,
       gender: map['gender'] as int? ?? 0,
       adult: map['adult'] as bool? ?? false,
-      profilePath: map['profile_path']?.toString(), // Puede ser null
+      profilePath: map['profile_path']?.toString(), 
       alsoKnownAs: (map['also_known_as'] as List<dynamic>?)
               ?.map((item) => item.toString())
               .toList() ??

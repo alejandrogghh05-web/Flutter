@@ -31,13 +31,12 @@ class TopRatedActor extends StatelessWidget {
                 barrierDismissible: false,
               );
               
-              // Asegurarnos de que tenemos un ID válido
               final actorId = actor.id;
               
               // Obtener detalles completos del actor desde la API
               final actorDetails = await ApiService.getActorDetails(actorId);
               
-              // Cerrar el diálogo de carga
+              // Cerrar el icono de carga
               Get.back();
               
               if (actorDetails != null) {
