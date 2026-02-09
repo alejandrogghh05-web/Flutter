@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:supabase_notes/app/routes/app_pages.dart';
 import 'dart:async';
 
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:supabase_flutter/supabase_flutter.dart'; 
 
 class AuthController extends GetxController {
   Timer? authTimer;

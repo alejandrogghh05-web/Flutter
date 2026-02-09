@@ -14,6 +14,14 @@ import 'package:supabase_notes/app/modules/profile/bindings/profile_binding.dart
 import 'package:supabase_notes/app/modules/profile/views/profile_view.dart';
 import 'package:supabase_notes/app/modules/register/bindings/register_binding.dart';
 import 'package:supabase_notes/app/modules/register/views/register_view.dart';
+import 'package:supabase_notes/app/modules/add_task/bindings/add_task_binding.dart';
+import 'package:supabase_notes/app/modules/add_task/views/add_task_view.dart';
+import 'package:supabase_notes/app/modules/edit_task/bindings/edit_task_binding.dart';
+import 'package:supabase_notes/app/modules/edit_task/views/edit_task_view.dart';
+import 'package:supabase_notes/app/modules/add_character/bindings/add_character_binding.dart';
+import 'package:supabase_notes/app/modules/add_character/views/add_character_view.dart';
+import 'package:supabase_notes/app/modules/edit_character/bindings/edit_character_binding.dart';
+import 'package:supabase_notes/app/modules/edit_character/views/edit_character_view.dart';
 
 part 'app_routes.dart';
 
@@ -52,6 +60,26 @@ class AppPages {
       name: _Paths.EDIT_NOTE,
       page: () => EditNoteView(),
       binding: EditNoteBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_TASK,
+      page: () => AddTaskView(),
+      binding: AddTaskBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_TASK,
+      page: () => EditTaskView(),
+      binding: EditTaskBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_CHARACTER,
+      page: () => AddFavoriteCharacterView(),
+      binding: AddFavoriteCharacterBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_CHARACTER,
+      page: () => EditFavoriteCharacterView(),
+      binding: EditFavoriteCharacterBinding(),
     ),
   ];
 }

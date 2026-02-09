@@ -1,0 +1,1 @@
+ C:\\Users\\Usuario\\S2AM\\Movils\\FlutterAlejandro\\6_SupaBase\\supersearch-main\\.dart_tool\\flutter_build\\7d3efaa74141185ae48f9f6651b4bba4\\native_assets.json: 
